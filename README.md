@@ -2,7 +2,7 @@
 
 ## In Game Example
 
-![Screenshot](https://i.imgur.com/cDND05S.mp4)
+![Screenshot](https://i.imgur.com/cDND05S.gif)
 
 ### Features
 

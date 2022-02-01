@@ -1,6 +1,8 @@
 <div id="top"></div>
-### In Game Example
-[![Product Name Screen Shot][product-screenshot]]
+
+## In Game Example
+
+[![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/cDND05S.mp4)
 
 ### Features
 

@@ -2,7 +2,7 @@
 
 ## In Game Example
 
-[![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/cDND05S.mp4)
+![Screenshot](https://i.imgur.com/cDND05S.mp4)
 
 ### Features
 

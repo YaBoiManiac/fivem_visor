@@ -145,27 +145,38 @@ Citizen.CreateThread(function()
 
     RegisterCommand(Config.CommandName, visor_toggle)
 
-    if ( Config.EnableNightVision ) then
-        while true do Wait(100)
-            if ( GetRenderingCam() == -1 ) then
-                local gender = (GetEntityModel(PlayerPedId()) == GetHashKey("mp_m_freemode_01") and 0 or 1)
-                local comp = GetPedPropIndex(PlayerPedId(), 0)
-                if ( comp <= 119 and comp >= 115 ) then
-                    if ( visor_TOGGLES["DOWN"][gender][comp] ) then
-                        if ( not GetUsingnightvision() ) then
-                            SetNightvision(true)
-                            PlaySoundFrontend(-1, "On", "GTAO_Vision_Modes_SoundSet", false)
-                        end
-                    else
-                        if ( GetUsingnightvision() ) then
-                            SetNightvision(false)
-                            PlaySoundFrontend(-1, "Off", "GTAO_Vision_Modes_SoundSet", false)
-                        end
-                    end
-                elseif ( GetUsingnightvision() ) then
-                    SetNightvision(false)
+    if ( Config.KeyCommandEnabled or Config.EnableNightVision ) then
+        while true do Wait(0)
+            if ( Config.KeyCommandEnabled ) then
+                if ( IsControlJustPressed(0, Config.KeyCommand) ) then
+                    visor_toggle()
                 end
             end
+
+            if ( Config.EnableNightVision ) then
+                if ( GetRenderingCam() == -1 ) then
+                    local gender = (GetEntityModel(PlayerPedId()) == GetHashKey("mp_m_freemode_01") and 0 or 1)
+                    local comp = GetPedPropIndex(PlayerPedId(), 0)
+                    if ( comp <= 119 and comp >= 115 ) then
+                        if ( visor_TOGGLES["DOWN"][gender][comp] ) then
+                            if ( not GetUsingnightvision() ) then
+                                SetNightvision(true)
+                                PlaySoundFrontend(-1, "On", "GTAO_Vision_Modes_SoundSet", false)
+                            end
+                        else
+                            if ( GetUsingnightvision() ) then
+                                SetNightvision(false)
+                                PlaySoundFrontend(-1, "Off", "GTAO_Vision_Modes_SoundSet", false)
+                            end
+                        end
+                    elseif ( GetUsingnightvision() ) then
+                        SetNightvision(false)
+                    end
+                end
+            end
+
         end
+
     end
+
 end)

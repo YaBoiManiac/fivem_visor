@@ -10,6 +10,9 @@
 Config = {}
 -- Slash command
 Config.CommandName = "visor"
+-- Key Command settings
+Config.KeyCommandEnabled = true
+Config.KeyCommand = 344 -- f11 | More Controls > https://docs.fivem.net/docs/game-references/controls/
 -- Enables whether nightvision gets enabled on the nightvision helmets
 Config.EnableNightVision = true
 

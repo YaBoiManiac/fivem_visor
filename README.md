@@ -2,7 +2,7 @@
 
 ## In Game Example
 
-![Screenshot](https://i.imgur.com/cDND05S.gif)
+![Screenshot](https://github.com/YaBoiManiac/fivem_visor/blob/main/helmet.gif?raw=true)
 
 ### Features
 

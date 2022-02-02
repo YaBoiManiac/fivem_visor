@@ -96,7 +96,7 @@ local visor_setDown = function(gender, comp)
     end
 
     local texture = GetPedPropTextureIndex(PlayerPedId(), 0)
-    SetPedPropIndex(ped, visor_TOGGLES["UP"][gender][comp], texture, 2)
+    SetPedPropIndex(ped, 0, visor_TOGGLES["UP"][gender][comp], texture, 2)
 end
 
 local visor_setUp = function(gender, comp)
@@ -116,7 +116,7 @@ local visor_setUp = function(gender, comp)
     end
 
     local texture = GetPedPropTextureIndex(PlayerPedId(), 0)
-    SetPedPropIndex(ped, visor_TOGGLES["DOWN"][gender][comp], texture, 2)
+    SetPedPropIndex(ped, 0, visor_TOGGLES["DOWN"][gender][comp], texture, 2)
 end
 
 local visor_toggle = function()
